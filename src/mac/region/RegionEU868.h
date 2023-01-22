@@ -47,7 +47,7 @@ extern "C"
 /*!
  * LoRaMac maximum number of channels
  */
-#define EU868_MAX_NB_CHANNELS                       16
+#define EU868_MAX_NB_CHANNELS                       3
 
 /*!
  * Number of default channels
@@ -62,27 +62,27 @@ extern "C"
 /*!
  * Minimal datarate that can be used by the node
  */
-#define EU868_TX_MIN_DATARATE                       DR_0
+#define EU868_TX_MIN_DATARATE                       DR_5
 
 /*!
  * Maximal datarate that can be used by the node
  */
-#define EU868_TX_MAX_DATARATE                       DR_7
+#define EU868_TX_MAX_DATARATE                       DR_5
 
 /*!
  * Minimal datarate that can be used by the node
  */
-#define EU868_RX_MIN_DATARATE                       DR_0
+#define EU868_RX_MIN_DATARATE                       DR_5
 
 /*!
  * Maximal datarate that can be used by the node
  */
-#define EU868_RX_MAX_DATARATE                       DR_7
+#define EU868_RX_MAX_DATARATE                       DR_5
 
 /*!
  * Default datarate used by the node
  */
-#define EU868_DEFAULT_DATARATE                      DR_0
+#define EU868_DEFAULT_DATARATE                      DR_5
 
 /*!
  * Minimal Rx1 receive datarate offset
@@ -243,13 +243,13 @@ extern "C"
  * LoRaMac default channel 2
  * Channel = { Frequency [Hz], RX1 Frequency [Hz], { ( ( DrMax << 4 ) | DrMin ) }, Band }
  */
-#define EU868_LC2                                   { 868300000, 0, { ( ( DR_5 << 4 ) | DR_0 ) }, 1 }
+#define EU868_LC2                                   { 868100000, 0, { ( ( DR_5 << 4 ) | DR_0 ) }, 1 }
 
 /*!
  * LoRaMac default channel 3
  * Channel = { Frequency [Hz], RX1 Frequency [Hz], { ( ( DrMax << 4 ) | DrMin ) }, Band }
  */
-#define EU868_LC3                                   { 868500000, 0, { ( ( DR_5 << 4 ) | DR_0 ) }, 1 }
+#define EU868_LC3                                   { 868100000, 0, { ( ( DR_5 << 4 ) | DR_0 ) }, 1 }
 
 /*!
  * LoRaMac channels which are allowed for the join procedure
