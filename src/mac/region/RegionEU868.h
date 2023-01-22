@@ -72,12 +72,12 @@ extern "C"
 /*!
  * Minimal datarate that can be used by the node
  */
-#define EU868_RX_MIN_DATARATE                       DR_0
+#define EU868_RX_MIN_DATARATE                       DR_5
 
 /*!
  * Maximal datarate that can be used by the node
  */
-#define EU868_RX_MAX_DATARATE                       DR_7
+#define EU868_RX_MAX_DATARATE                       DR_5
 
 /*!
  * Default datarate used by the node
