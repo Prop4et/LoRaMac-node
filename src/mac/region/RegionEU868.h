@@ -254,7 +254,7 @@ extern "C"
 /*!
  * LoRaMac channels which are allowed for the join procedure
  */
-#define EU868_JOIN_CHANNELS                         ( uint16_t )( LC( 1 ) )
+#define EU868_JOIN_CHANNELS                         ( uint16_t )( LC( 1 ) | LC( 2 ) | LC( 3 ))
 
 /*!
  * Data rates table definition
