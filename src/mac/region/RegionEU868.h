@@ -47,7 +47,7 @@ extern "C"
 /*!
  * LoRaMac maximum number of channels
  */
-#define EU868_MAX_NB_CHANNELS                       16 
+#define EU868_MAX_NB_CHANNELS                       3 
 
 /*!
  * Number of default channels
@@ -72,12 +72,12 @@ extern "C"
 /*!
  * Minimal datarate that can be used by the node
  */
-#define EU868_RX_MIN_DATARATE                       DR_5
+#define EU868_RX_MIN_DATARATE                       DR_0
 
 /*!
  * Maximal datarate that can be used by the node
  */
-#define EU868_RX_MAX_DATARATE                       DR_5
+#define EU868_RX_MAX_DATARATE                       DR_7
 
 /*!
  * Default datarate used by the node
