@@ -24,7 +24,6 @@
  */
 #include <stdlib.h>
 #include <stdint.h>
-#include <stdio.h>
 #include <stdbool.h>
 #include "utilities.h"
 #include "timer.h"
@@ -450,7 +449,6 @@ LmHandlerErrorStatus_t LmHandlerSend( LmHandlerAppData_t *appData, LmHandlerMsgT
     mcpsReq.Req.Unconfirmed.Datarate = LmHandlerParams->TxDatarate;
     if( LoRaMacQueryTxPossible( appData->BufferSize, &txInfo ) != LORAMAC_STATUS_OK )
     {
-        printf("Query tx not possible\n");
 
         // Send empty frame in order to flush MAC commands
         mcpsReq.Type = MCPS_UNCONFIRMED;
@@ -459,7 +457,6 @@ LmHandlerErrorStatus_t LmHandlerSend( LmHandlerAppData_t *appData, LmHandlerMsgT
     }
     else
     {
-        printf("Query tx possible\n");
         mcpsReq.Req.Unconfirmed.fPort = appData->Port;
         mcpsReq.Req.Unconfirmed.fBufferSize = appData->BufferSize;
         mcpsReq.Req.Unconfirmed.fBuffer = appData->Buffer;
@@ -468,11 +465,9 @@ LmHandlerErrorStatus_t LmHandlerSend( LmHandlerAppData_t *appData, LmHandlerMsgT
     TxParams.Datarate = LmHandlerParams->TxDatarate;
 
     status = LoRaMacMcpsRequest( &mcpsReq );
-    printf("After LoRaMacMcpsRequest %d\n", status);
 
     LmHandlerCallbacks->OnMacMcpsRequest( status, &mcpsReq, mcpsReq.ReqReturn.DutyCycleWaitTime );
     DutyCycleWaitTime = mcpsReq.ReqReturn.DutyCycleWaitTime;
-    printf("After DutyCycleWaitTime %u\n", DutyCycleWaitTime);
 
     if( status == LORAMAC_STATUS_OK )
     {
