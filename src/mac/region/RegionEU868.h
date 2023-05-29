@@ -67,7 +67,7 @@ extern "C"
 /*!
  * Maximal datarate that can be used by the node
  */
-#define EU868_TX_MAX_DATARATE                       DR_5
+#define EU868_TX_MAX_DATARATE                       DR_0
 
 /*!
  * Minimal datarate that can be used by the node
@@ -82,7 +82,7 @@ extern "C"
 /*!
  * Default datarate used by the node
  */
-#define EU868_DEFAULT_DATARATE                      DR_5
+#define EU868_DEFAULT_DATARATE                      DR_0
 
 /*!
  * Minimal Rx1 receive datarate offset
@@ -122,7 +122,7 @@ extern "C"
 /*!
  * Enabled or disabled the duty cycle
  */
-#define EU868_DUTY_CYCLE_ENABLED                    1
+#define EU868_DUTY_CYCLE_ENABLED                    0
 
 /*!
  * Maximum RX window duration
@@ -243,13 +243,13 @@ extern "C"
  * LoRaMac default channel 2
  * Channel = { Frequency [Hz], RX1 Frequency [Hz], { ( ( DrMax << 4 ) | DrMin ) }, Band }
  */
-#define EU868_LC2                                   { 868300000, 0, { ( ( DR_5 << 4 ) | DR_0 ) }, 1 }
+#define EU868_LC2                                   { 868100000, 0, { ( ( DR_5 << 4 ) | DR_0 ) }, 1 }
 
 /*!
  * LoRaMac default channel 3
  * Channel = { Frequency [Hz], RX1 Frequency [Hz], { ( ( DrMax << 4 ) | DrMin ) }, Band }
  */
-#define EU868_LC3                                   { 868500000, 0, { ( ( DR_5 << 4 ) | DR_0 ) }, 1 }
+#define EU868_LC3                                   { 868100000, 0, { ( ( DR_5 << 4 ) | DR_0 ) }, 1 }
 
 /*!
  * LoRaMac channels which are allowed for the join procedure
