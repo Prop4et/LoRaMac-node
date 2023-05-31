@@ -62,12 +62,12 @@ extern "C"
 /*!
  * Minimal datarate that can be used by the node
  */
-#define EU868_TX_MIN_DATARATE                       DR_0
+#define EU868_TX_MIN_DATARATE                       DR_2
 
 /*!
  * Maximal datarate that can be used by the node
  */
-#define EU868_TX_MAX_DATARATE                       DR_0
+#define EU868_TX_MAX_DATARATE                       DR_2
 
 /*!
  * Minimal datarate that can be used by the node
@@ -82,7 +82,7 @@ extern "C"
 /*!
  * Default datarate used by the node
  */
-#define EU868_DEFAULT_DATARATE                      DR_0
+#define EU868_DEFAULT_DATARATE                      DR_2
 
 /*!
  * Minimal Rx1 receive datarate offset
